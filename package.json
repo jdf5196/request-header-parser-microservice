@@ -1,16 +1,16 @@
 {
   "name": "request-header-parser-microservice",
   "version": "1.0.0",
-  "description": "returns users IP address, language, and operating system",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "author": "jdf5196",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
     "ip": "^1.1.2"
   },
-  "author": "jdf5196",
-  "license": "ISC"
+  "devDependencies": {},
+  "description": "returns users IP address, language, and operating system" 
 }

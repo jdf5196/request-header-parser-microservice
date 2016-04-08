@@ -8,7 +8,7 @@ let port = (process.env.PORT || 5000);
 
 app.set('port', port);
 
-app.use(express.static(process.cwd() + '/public'));
+app.use(express.static(process.cwd() + '/Public'));
 
 app.get('/whatami', function(req, res){
 	console.log(req.socket.remoteAddress);
