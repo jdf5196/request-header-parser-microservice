@@ -15,7 +15,7 @@ app.get('/whatami', function(req, res){
      req.socket.remoteAddress ||
      req.connection.socket.remoteAddress;
 	res.json({
-		'IP Address': ip.address(),
+		'IP Address': ip,
 		'Language': req.headers["accept-language"].split(",")[0],
 		'Software': req.headers["user-agent"].match(/\((.*?)\)/)[1]
 	})
