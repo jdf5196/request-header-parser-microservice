@@ -1,7 +1,6 @@
 'use strict';
 
 const express = require('express');
-const ip = require('ip');
 const app = express();
 
 let port = (process.env.PORT || 5000);
@@ -11,6 +10,10 @@ app.set('port', port);
 app.use(express.static(process.cwd() + '/Public'));
 
 app.get('/whatami', function(req, res){
+	let ip = req.headers['x-forwarded-for'] || 
+     req.connection.remoteAddress || 
+     req.socket.remoteAddress ||
+     req.connection.socket.remoteAddress;
 	res.json({
 		'IP Address': ip.address(),
 		'Language': req.headers["accept-language"].split(",")[0],

@@ -8,8 +8,7 @@
   "author": "jdf5196",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4",
-    "ip": "^1.1.2"
+    "express": "^4.13.4"
   },
   "devDependencies": {},
   "description": "returns users IP address, language, and operating system" 
