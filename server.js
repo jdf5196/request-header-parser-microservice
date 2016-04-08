@@ -11,9 +11,8 @@ app.set('port', port);
 app.use(express.static(process.cwd() + '/Public'));
 
 app.get('/whatami', function(req, res){
-	console.log(req.socket.remoteAddress);
 	res.json({
-		'IP Address': req.socket.remoteAddress,
+		'IP Address': ip.address(),
 		'Language': req.headers["accept-language"].split(",")[0],
 		'Software': req.headers["user-agent"].match(/\((.*?)\)/)[1]
 	})
